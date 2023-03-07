@@ -1,0 +1,282 @@
+
+/*FONTS IMPORTADOS DE GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,800;1,400&family=Overpass:wght@300&display=swap');
+
+/* RESETEO PARA NO TENER POR DEFAULT */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Para las imagenes*/
+}
+
+
+/* PRINCIPAL DEL DOCUMENTO */
+html,
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 { font-size: 44px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+p {
+    font-size: 16px; /*Parrafo tamaños*/
+    line-height: 1.5em; /*Interlineado*/
+    margin: 10px 0; /*Margen arriba (10px) y abajo (opx)*/
+}
+
+a {
+    text-decoration: none; /*Saca el subrayado del texto*/
+}
+
+/*CONTAINER*/
+.container{
+    margin:auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 40px 40px 100px;
+}
+
+
+
+/*HEADER*/
+    #main-header{
+        background: url(/img/mac2.remini-enhanced.jpg);
+        background-repeat: no-repeat; /*No se repita el fondo*/
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        color: white;
+
+        padding-top: 280px;
+        
+    }
+
+    /*ANIMACION H1*/
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+
+        50% {
+            transform: translatey(-20px);
+        }
+
+        100% {
+            transform: translatey(0px);
+        }
+    }
+
+    #main-header h1{
+        padding-top: 12px;
+        padding-bottom: 7px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    #main-header p{
+        width: 80%;
+        padding-bottom: 20px;
+
+    }
+
+
+
+/*BOTÓN*/
+.button{
+    background-color: rgb(14, 14, 110);
+    color:white;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px 23px;
+    cursor: pointer; /*cada vez que pasa mouse*/
+    letter-spacing: 1.5px;
+    border-radius: 20px;
+
+
+
+}
+/*FIN DE HEADER*/
+
+/*BODY*/
+
+ 
+
+/*SOBRE MI*/
+    #sobre-mi{
+        padding-top: 80px;
+        text-align:center;
+    }
+
+    #sobre-mi h2{
+        padding-bottom: 20px;
+        text-align: left;
+    }
+
+    #sobre-mi img{
+        height: 200px;
+        width: auto;
+        margin: 30px;
+        
+    }
+
+    .description-fila{
+        padding-top: 20px;
+    }
+
+    #sobre mi p{
+        text-align: left;
+        padding: 50px;
+        width: 100%;
+    }
+
+    /*WEB RESPONSIVE DESCRIPTION BOX*/
+    @media screen and (max-device-width:951px), screen and (max-width:951px){ 
+        .description-box {
+        Width: 100%!important;
+    }
+    }
+
+    .description-box{
+        float: left;
+        width: 33%;
+        padding-bottom: 50px;
+        padding: 25px;
+        
+    }
+
+/*FIN DE SOBRE MI*/
+
+
+/*CURSOS Y CERTIFICADOS*/
+    
+    .certificados-foto{
+        width: 45%;
+        padding: 25px 30px 80px 30px;
+        float: left;
+    }
+
+    #certificados h2{
+        padding-bottom: 20px;
+        text-align: left;
+    }
+
+    #certificados-texto {
+        float: right;
+        width: 50%;    
+    }
+
+
+    /*WEB RESPONSIVE*/
+    @media screen and (max-device-width:951px), screen and (max-width:951px){ 
+        .certificados-foto{
+        text-align: center;
+        Width: 100%!important;
+        padding: 25px 0px 30px 0px;
+
+    }
+    }
+
+/*FIN DE CERTIFICADOS Y CURSOS*/
+
+
+/*CONTACTO FORM*/
+    #contacto{
+        background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    }
+
+    #contacto,
+    #contacto :before,
+    #contacto :after{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-weight: 500;
+    }
+
+    #contacto h1{
+        font-size: 30px;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    #contacto p{
+        color: white;
+        font-size: 15px;
+    }
+
+    #contacto form{
+        width: 100%;
+        position: relative;
+        margin: 30px auto 0 auto;
+    }
+
+    #contacto .row{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        grid-gap: 20px 30px;
+        margin-bottom: 20px;
+    }
+
+    #contacto label{
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    #contacto textarea,
+    #contacto input{
+        width: 100%;
+        font-weight: 400;
+        padding: 8px 10px;
+        border-radius: 5px;
+        border: 1.2px solid #c4cae0;
+        margin-top: 5px;
+    }
+
+
+    #contacto textarea:focus,
+    #contacto input:focus{
+        outline: none;
+        border-color: #6f6df4;
+    }
+
+    #boton-form{
+        border: none;
+        padding: 10px 20px;
+        background: linear-gradient(
+            130deg,
+            #6f6df4,
+            #4c46f5
+        );
+        color: #ffffff;
+        border-radius: 20px;
+    }
+
+/*FIN DE CONTACTO FORM*/
+
+/*FOOTER*/
+
+
+    #mainfooter p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+/*FIN DE FOOTER*/
+
+/*FIN DE BODY*/
+
+/*CARGAR PAGINA*/
+    #cargando{
+        background: black url(/img/1.gif) no-repeat center;
+        background-size: 5%;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+    }
+/*FIN DE CARGAR PAGINA*/
+
